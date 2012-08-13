@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Android3DTestActivity!</string>
+    <string name="app_name">Android3DTest</string>
+
+    
+    <string name="summary_list_preference">设置动画方式</string>
+    <string name="title_list_preference">Animation Type</string>
+    
+    <string name="animation_type_title">Animation Type</string>
+    <string name="help_text">OPhone 3D 封面效果演示程序。\n 触摸屏幕左右拖动即可翻页。</string>
+
+    
+</resources>
