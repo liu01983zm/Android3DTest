@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.LinearLayout;
-
+//http://catalog.codeproject.com/Articles/269727/Fountain-OpenGL-Application-walkthrough
 public class FountainGLActivity extends Activity 
 {
    	FountainGLRenderer mRenderer = null;
@@ -41,8 +41,7 @@ public class FountainGLActivity extends Activity
 		
 		//calculate angle and position of camera
 		mRenderer.SwapCenter();
-		//mRenderer.SwapCenter();
-		
+      
 	}
 
 	//this method called every time menu is shown
@@ -51,7 +50,7 @@ public class FountainGLActivity extends Activity
 	{
 		menu.clear(); //reset menu
 		//set menu items based on current settings
-		/*mMenuList[0] = menu.add((mRenderer.ShowBall?"Hide":"Show")+" Ball");
+		mMenuList[0] = menu.add((mRenderer.ShowBall?"Hide":"Show")+" Ball");
 		mMenuList[1] = menu.add((mRenderer.ShowFloor?"Hide":"Show")+" Floor");
 		mMenuList[2] = menu.add((mRenderer.ShowFountain?"Hide":"Show")+" Fountain");
 		mMenuList[3] = menu.add((mRenderer.ShowPool?"Hide":"Show")+" Pool");
@@ -61,14 +60,14 @@ public class FountainGLActivity extends Activity
 		mMenuList[7] = menu.add((mRenderer.ShowFPS?"Hide":"Show")+" FPS");
 		mMenuList[8] = menu.add(mRenderer.Paused?"Unpause":"Pause");
 		mMenuList[9] = menu.add("Exit");
-		*/Log.i("activity menu","menu create------------");
+		Log.i("activity menu","menu create------------");
 		return super.onCreateOptionsMenu(menu);
 	}
    
 	//listener for menu item clicked
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) 
-	{	/*		
+	{			
 		if (item == mMenuList[0]) //Show\Hide Ball
 			mRenderer.ShowBall = !mRenderer.ShowBall;
 		else if (item == mMenuList[1]) //Show\Hide Floor
@@ -89,7 +88,7 @@ public class FountainGLActivity extends Activity
 			mRenderer.Paused = !mRenderer.Paused;
 		else if (item == mMenuList[9]) //Exit
 			finish();
-		*/
+	
 		//store options 
 		getSharedPreferences("FountainGL", 0).edit()
 		 .putBoolean("ShowBall", mRenderer.ShowBall)

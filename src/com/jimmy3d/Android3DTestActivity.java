@@ -5,6 +5,9 @@ import com.jimmy3d.cricle.Activity_GL_Cylinder;
 import com.jimmy3d.cube.CubeCrashActivity;
 import com.jimmy3d.solar.SolarActivity;
 import com.jimmy3d.triangle.Activity_GL_Triangle;
+import com.ophone.OPhone3DCoverListApp;
+
+import droid.fgl.FountainGLActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -31,7 +34,8 @@ public class Android3DTestActivity extends Activity implements OnClickListener{
 	public static final int PYRAMID_ID = 4;//pyramid
 	public static final int CUBE_ID = 5;
 	public static final int SOLAR_ID =6;
-	
+	public static final int OPHONE_COVER =7;
+	public static final int FGL_3D =8;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +84,17 @@ public class Android3DTestActivity extends Activity implements OnClickListener{
         btn6.setOnClickListener(this);
         rootLayout.addView(btn6);
         
+        Button btn7 = new Button(this);
+        btn7.setId(OPHONE_COVER);
+        btn7.setText("Ophone 3D  Cover");
+        btn7.setOnClickListener(this);
+        rootLayout.addView(btn7);
         
+        Button btn8 = new Button(this);
+        btn8.setId(FGL_3D);
+        btn8.setText("FGL 3D Fountain");
+        btn6.setOnClickListener(this);
+        rootLayout.addView(btn8);
     }
 
 	@Override
@@ -100,13 +114,19 @@ public class Android3DTestActivity extends Activity implements OnClickListener{
 			intent.setClass(getApplicationContext(),Activity_GL_Triangle.class);
 			break;
 		case PYRAMID_ID:
-			//intent.setClass(getApplicationContext(),Activity_GL_Triangle.class);
+			intent.setClass(getApplicationContext(),Activity_GL_Triangle.class);
 			break;
 		case CUBE_ID:
 			intent.setClass(getApplicationContext(),CubeCrashActivity.class);
 			break;
 		case SOLAR_ID:
 			intent.setClass(getApplicationContext(),SolarActivity.class);
+			break;
+		case OPHONE_COVER:
+			intent.setClass(getApplicationContext(),OPhone3DCoverListApp.class);
+			break;
+		case FGL_3D:
+			intent.setClass(getApplicationContext(),FountainGLActivity.class);
 			break;
 		}
 		startActivity(intent);

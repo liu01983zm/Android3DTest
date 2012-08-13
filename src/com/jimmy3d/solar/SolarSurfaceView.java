@@ -251,8 +251,8 @@ private class SceneRenderer implements GLSurfaceView.Renderer
         gl.glEnable(GL10.GL_LIGHTING);//允许光照    
         
        
-        initGreenLight(gl);//初始化绿色灯
-        initRedLight(gl);//初始化红色灯
+       // initGreenLight(gl);//初始化绿色灯
+      //  initRedLight(gl);//初始化红色灯
         initMaterial(gl);//初始化材质
         
         textureId=initTexture(gl,R.drawable.bool1);//初始化纹理
